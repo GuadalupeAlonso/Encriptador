@@ -1,0 +1,160 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #f4c1d3;
+
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-rows:110px 1fr 100px ;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+}
+
+.header{
+    grid-area:"header";
+
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    gap: 30px;
+    
+}   
+    .logo{
+        margin: 0 0 0 20px;
+    }
+    .moño{
+        position: absolute;
+        top: 0;
+        left: 72px;
+        rotate: 25deg;
+    }
+    .logo:hover{
+        scale: 1.2;
+    }
+    .titulo{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: baseline;
+        gap: 15px;
+    }
+    .titulo h1, .titulo h2{ /* En las sigs media-queries los separas pa q el tamaño de letra ya cambie el tamaño y el color */
+        font-size: 70px;
+        color: azure;
+    
+    }
+
+.main{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background: #f4b39eee;
+        border-radius: 5%;
+        border: dotted 5px salmon;
+        padding: 15px;
+        margin: 2vw;
+    }
+        .input{
+            background: wheat;
+            border-radius: 5%;
+            border: solid 3px salmon;
+            padding: 15px;
+
+            font-size: 30px;
+
+            resize: none;
+            width: 50vw;
+            height: 330px;
+        }
+        .botones_input{ /* Caja que encierra botones */
+            display: flex;
+            margin: auto;
+            align-items: center;
+            gap: 45px;
+        }
+        .botones_cortos{
+            width: 57px;
+            height: 57px;
+            border-radius: 50%;
+            border: solid 2.5px salmon;
+            background: rgb(255, 159, 191);
+        }
+        #portapapeles, #bote_basura{
+            scale: 0.75;
+            filter: invert(100%);
+        }
+        .botones_largos{ /* Botones */
+            background: rgb(255, 159, 191);
+            border: solid 2.5px salmon;
+            color: antiquewhite;
+            font-size: 18px;
+            font-weight: 700;
+            width: 160px;
+            height: 60px;
+            border-radius: 40% 50%;
+        }
+        .botones_largos:hover, .botones_cortos:hover{
+            scale: 1.1;
+        }
+        .output{
+            overflow:auto ;
+            overflow-x: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: wheat;
+
+            border-radius: 5%;
+            border: solid 3px salmon;
+
+            padding: 15px;
+            width: 21.5vw;
+            height: 400px;
+        }
+            .output h1{
+                color: rgb(75, 75, 75);
+                text-align: center;
+                font-weight: 00;
+            }
+            .output h2{
+                color: rgb(75, 75, 75);
+                font-size: 27px;
+                text-align: center;
+                font-weight: 500;
+            }
+
+.footer{
+    grid-area: "footer";
+    min-width: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: aliceblue;
+
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    background: #f4b39eee;
+    border: solid 2px salmon;
+    border-radius: 60% 60% 0 0;
+    
+}
+    .footer .copyright{ /* Para centrar maso el nombre de peeta con los iconos*/
+        padding-top: 3px;
+    }
+    .footer a:hover{
+        scale: 1.15;
+    }

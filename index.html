@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Challenge Encriptador</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+
+        <script src="app.js"></script>
+    </head>
+
+    <body>
+        <header class="header">
+            <a href="https://www.aluracursos.com/"><img class="logo" src="img/Alura.png"><img class="moño" src="img/moño.png"></a>
+            <div class="titulo"><h1>Challenge ONE:  </h1><h2> Encriptador</h2></div>
+        </header>
+
+        <div class="main">
+            <div class="contenedor">
+                <form id="formulario">
+                <textarea class="input" id="input" placeholder="inserte aqui su texto..."></textarea> </form>
+                <div class="botones_input">
+                    <button class="botones_cortos" id="copiar" onclick="copiar()"><img id="portapapeles" src="img/portapapeles.png"></button>
+                    <button class="botones_largos" id="encriptar" onclick="encriptar()" >Encriptar</button>
+                    <button class="botones_largos" id="desencriptar" onclick="desencriptar()">Desencriptar</button>
+                    <button class="botones_cortos" id="borrar" onclick="borrar()"><img id="bote_basura" src="img/bote-de-basura.png"></button>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="output">
+                    <h1 id="texto_var1">Bienvenide!</h1> 
+                    <h2 id="texto_var2">Por favor, ingresa el texto que deseas encriptar.</h2>
+                    <img id="ternurin" src="img/ternurin_bienvenida1.png"></div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p class="copyright">&#169; Guadalupe Alonso, 2024</p>
+            <a href="https://github.com/GuadalupeAlonso"><i class="fa fa-github" style="font-size:36px;color:white"></i></a>
+            <a href="https://www.linkedin.com/in/galonsoc/"><i class="fa fa-linkedin-square" style="font-size:35px;color:white"></i></a>
+        </footer>
+    </body>
+</html>
